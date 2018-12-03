@@ -1,7 +1,7 @@
 /**
  * concat method
  * given an initial array and a number of values
- * return new array with values added 
+ * return new array with values added
  */
 
 import concat from './concat'
@@ -15,15 +15,18 @@ describe('#concat', () => {
     expect(actual).toEqual(expectedConcatedArray)
   })
 
-  const tests = [{
-    input: [1, 2, '3'],
-    values: [{name: 'lindell'}],
-    expected: [1, 2, '3', {name: 'lindell'}]
-  }, {
-    input: ['hello', '() => null'],
-    values: [true, false],
-    expected: ['hello', '() => null', true, false]
-  }]
+  const tests = [
+    {
+      input: [1, 2, '3'],
+      values: [{ name: 'lindell' }],
+      expected: [1, 2, '3', { name: 'lindell' }],
+    },
+    {
+      input: ['hello', '() => null'],
+      values: [true, false],
+      expected: ['hello', '() => null', true, false],
+    },
+  ]
 
   tests.forEach(t => {
     it(`should concat ${t.values.length} items to array ${t.input}`, () => {
