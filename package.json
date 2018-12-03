@@ -1,0 +1,19 @@
+{
+  "name": "ts-lodash",
+  "version": "0.0.1",
+  "description": "MY personal ts version of lodash",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Typescript",
+    "Lodash",
+    "Utils"
+  ],
+  "author": "Lindell Carter <lindellcarternyc@gmail.com> (https://github.com/lindellcarternyc)",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^3.2.1"
+  }
+}
