@@ -22,7 +22,7 @@ describe('#compact', () => {
   tests.forEach(t => {
     it(`should remove falsey values from an array ${t.input}`, () => {
       const input = t.input
-      const actualCompacted = compact(input)
+      const actualCompacted = compact(input as any)
       expect(actualCompacted).toEqual(t.expected)
     })
   })
