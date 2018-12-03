@@ -1,6 +1,6 @@
 /**
  * Given an array and a number of values
- * return a new array containing elements that 
+ * return a new array containing elements that
  * are only in one of the inputs
  */
 
@@ -27,15 +27,18 @@ describe('#difference', () => {
     expectedDifference: T[]
   }
 
-  const tests: ITest[] = [{
-    inputArray: [1, 2, 3],
-    differenceValues: [3, 4],
-    expectedDifference: _diff([1, 2,3], [3, 4])
-  }, {
-    inputArray: ['a', 'b'],
-    differenceValues: ['c', 'd'],
-    expectedDifference: _diff(['a', 'b'], ['c', 'd'])
-  }]
+  const tests: ITest[] = [
+    {
+      inputArray: [1, 2, 3],
+      differenceValues: [3, 4],
+      expectedDifference: _diff([1, 2, 3], [3, 4]),
+    },
+    {
+      inputArray: ['a', 'b'],
+      differenceValues: ['c', 'd'],
+      expectedDifference: _diff(['a', 'b'], ['c', 'd']),
+    },
+  ]
 
   tests.forEach(t => {
     it(`should find the difference between ${t.inputArray} and ${t.differenceValues}`, () => {
