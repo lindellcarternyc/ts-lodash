@@ -4,33 +4,33 @@
 
 import chunk from './chunk'
 
- describe('#chunk', () => {
+describe('#chunk', () => {
   const inputArray = [1, 2, 3, 4, 5, 6]
   const chunkTests = [
     {
       size: 1,
-      expected: [[1], [2], [3], [4], [5], [6]]
+      expected: [[1], [2], [3], [4], [5], [6]],
     },
     {
       size: 2,
-      expected: [[1, 2], [3, 4], [5, 6]]
+      expected: [[1, 2], [3, 4], [5, 6]],
     },
     {
       size: 3,
-      expected: [[1, 2, 3], [4, 5, 6]]
+      expected: [[1, 2, 3], [4, 5, 6]],
     },
     {
       size: 4,
-      expected: [[1, 2, 3, 4], [5, 6]]
+      expected: [[1, 2, 3, 4], [5, 6]],
     },
     {
       size: 5,
-      expected: [[1, 2, 3, 4, 5], [6]]
+      expected: [[1, 2, 3, 4, 5], [6]],
     },
     {
       size: 6,
-      expected: [[1, 2, 3, 4, 5, 6]]
-    }
+      expected: [[1, 2, 3, 4, 5, 6]],
+    },
   ]
 
   chunkTests.forEach(test => {

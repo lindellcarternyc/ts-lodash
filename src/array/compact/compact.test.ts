@@ -11,12 +11,12 @@ describe('#compact', () => {
   const tests = [
     {
       input: [0, 1, 2, null, [4]],
-      expected: [1, 2, [4]]
+      expected: [1, 2, [4]],
     },
     {
       input: [[], 'sdjsg', undefined],
-      expected: [[], 'sdjsg']
-    }
+      expected: [[], 'sdjsg'],
+    },
   ]
 
   tests.forEach(t => {
