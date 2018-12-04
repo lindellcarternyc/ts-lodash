@@ -4,5 +4,6 @@ import concat from './concat'
 import difference from './difference'
 import drop from './drop'
 import dropRight from './dropRight'
+import dropRightWhile from './dropRightWhile'
 
-export { chunk, compact, concat, difference, drop, dropRight }
+export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile }
