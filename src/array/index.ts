@@ -6,5 +6,6 @@ import drop from './drop'
 import dropRight from './dropRight'
 import dropRightWhile from './dropRightWhile'
 import dropWhile from './dropWhile'
+import fill from './fill'
 
-export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile, dropWhile }
+export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile, dropWhile, fill }
