@@ -3,5 +3,6 @@ import compact from './compact'
 import concat from './concat'
 import difference from './difference'
 import drop from './drop'
+import dropRight from './dropRight'
 
-export { chunk, compact, concat, difference, drop }
+export { chunk, compact, concat, difference, drop, dropRight }
