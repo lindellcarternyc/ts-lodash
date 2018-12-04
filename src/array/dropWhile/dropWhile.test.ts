@@ -3,13 +3,20 @@ import { dropWhile as _dropWhile } from 'lodash'
 import dropWhile from './dropWhile'
 
 describe('#dropWhile', () => {
-  const users = [{
-    user: 'barney', active: false,
-  }, {
-    user: 'fred', active: false
-  }, {
-    user: 'pebbles', active: true
-  }]
+  const users = [
+    {
+      user: 'barney',
+      active: false,
+    },
+    {
+      user: 'fred',
+      active: false,
+    },
+    {
+      user: 'pebbles',
+      active: true,
+    },
+  ]
 
   it('should drop while a function returns true', () => {
     const expected = _dropWhile(users, u => !u.active)
@@ -18,8 +25,8 @@ describe('#dropWhile', () => {
   })
 
   it('should drop items while they match target object', () => {
-    const expected = _dropWhile(users, {user: 'barney', active: false})
-    const actual = dropWhile(users, {user: 'barney', active: false})
+    const expected = _dropWhile(users, { user: 'barney', active: false })
+    const actual = dropWhile(users, { user: 'barney', active: false })
     expect(actual).toEqual(expected)
   })
 

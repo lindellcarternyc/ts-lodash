@@ -1,2 +1,2 @@
 import dropWhile from './dropWhile'
-export default dropWhile 
+export default dropWhile
