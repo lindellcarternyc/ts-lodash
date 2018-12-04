@@ -7,5 +7,6 @@ import dropRight from './dropRight'
 import dropRightWhile from './dropRightWhile'
 import dropWhile from './dropWhile'
 import fill from './fill'
+import findIndex from './findIndex'
 
-export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile, dropWhile, fill }
+export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile, dropWhile, fill, findIndex }
