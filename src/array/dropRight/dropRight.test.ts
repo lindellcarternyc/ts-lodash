@@ -21,7 +21,7 @@ describe('#dropRight', () => {
   })
 
   const inputs = 'abcdefghijk'.split('')
-  for ( let idx = 0; idx < inputs.length; idx++ ) {
+  for (let idx = 0; idx < inputs.length; idx++) {
     const expected = dRight(inputs, idx)
     const actual = dropRight(inputs, idx)
     it(`should drop ${idx} items from then end of ${inputs}`, () => {
@@ -42,6 +42,6 @@ describe('#dropRight', () => {
   it('should treat negative numbers the same way that lodash does', () => {
     const expected = dRight(inputs, -1)
     const actual = dropRight(inputs, -1)
-    expect(actual).toEqual(expected) 
+    expect(actual).toEqual(expected)
   })
 })
