@@ -2,7 +2,7 @@
  * Function drop
  * @param array an array of items
  * @param n [defaults to 1] the number of items to drop
- * 
+ *
  * @returns Array with items dropped
  */
 
@@ -23,7 +23,7 @@ describe('#drop', () => {
   })
 
   const testInput = 'abcdefghijklmnopqrstuv'.split('')
-  for ( let tIndex = 0; tIndex < testInput.length; tIndex++ ) {
+  for (let tIndex = 0; tIndex < testInput.length; tIndex++) {
     it(`should remove ${tIndex} items from array ${testInput}`, () => {
       const expected = _drop(testInput, tIndex)
       const actual = drop(testInput, tIndex)
