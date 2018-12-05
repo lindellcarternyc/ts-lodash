@@ -17,6 +17,7 @@ import head from './head'
 import indexOf from './indexOf'
 import initial from './initial'
 import intersection from './intersection'
+import intersectionBy from './intersectionBy'
 
 export {
   chunk,
@@ -37,5 +38,6 @@ export {
   head,
   indexOf,
   initial,
-  intersection
+  intersection,
+  intersectionBy,
 }
