@@ -14,6 +14,7 @@ import flattenDeep from './flattenDeep'
 import flattenDepth from './flattenDepth'
 import fromPairs from './fromPairs'
 import head from './head'
+import indexOf from './indexOf'
 
 export {
   chunk,
@@ -31,5 +32,6 @@ export {
   flattenDeep,
   flattenDepth,
   fromPairs,
-  head
+  head,
+  indexOf,
 }
