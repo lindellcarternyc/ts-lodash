@@ -13,6 +13,7 @@ import flatten from './flatten'
 import flattenDeep from './flattenDeep'
 import flattenDepth from './flattenDepth'
 import fromPairs from './fromPairs'
+import head from './head'
 
 export {
   chunk,
@@ -30,4 +31,5 @@ export {
   flattenDeep,
   flattenDepth,
   fromPairs,
+  head
 }
