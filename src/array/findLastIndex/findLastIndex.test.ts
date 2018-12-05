@@ -6,15 +6,22 @@ describe('#findLastIndex', () => {
     active: boolean
   }
 
-  const TestUsers: IUser[] = [{
-    username: 'barney', active: true
-  }, {
-    username: 'fred', active: false
-  }, {
-    username: 'pebbles', active: false
-  }]
+  const TestUsers: IUser[] = [
+    {
+      username: 'barney',
+      active: true,
+    },
+    {
+      username: 'fred',
+      active: false,
+    },
+    {
+      username: 'pebbles',
+      active: false,
+    },
+  ]
   it('should return the last index for which a pred func returns true', () => {
-    const idx = findLastIndex(TestUsers, (user) => user.username === 'pebbles')
+    const idx = findLastIndex(TestUsers, user => user.username === 'pebbles')
     expect(idx).toBe(2)
   })
 

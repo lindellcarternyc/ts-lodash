@@ -6,13 +6,20 @@ describe('#findIndex', () => {
     active: boolean
   }
 
-  const TestUsers = [{
-    user: 'barney', active: false,
-  }, {
-    user: 'fred', active: false
-  }, {
-    user: 'pebbles', active: true
-  }]
+  const TestUsers = [
+    {
+      user: 'barney',
+      active: false,
+    },
+    {
+      user: 'fred',
+      active: false,
+    },
+    {
+      user: 'pebbles',
+      active: true,
+    },
+  ]
 
   it('should return a number', () => {
     const result = findIndex(TestUsers, _ => true)

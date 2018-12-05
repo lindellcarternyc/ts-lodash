@@ -10,4 +10,16 @@ import fill from './fill'
 import findIndex from './findIndex'
 import findLastIndex from './findLastIndex'
 
-export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile, dropWhile, fill, findIndex, findLastIndex }
+export {
+  chunk,
+  compact,
+  concat,
+  difference,
+  drop,
+  dropRight,
+  dropRightWhile,
+  dropWhile,
+  fill,
+  findIndex,
+  findLastIndex,
+}
