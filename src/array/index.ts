@@ -8,5 +8,6 @@ import dropRightWhile from './dropRightWhile'
 import dropWhile from './dropWhile'
 import fill from './fill'
 import findIndex from './findIndex'
+import findLastIndex from './findLastIndex'
 
-export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile, dropWhile, fill, findIndex }
+export { chunk, compact, concat, difference, drop, dropRight, dropRightWhile, dropWhile, fill, findIndex, findLastIndex }
