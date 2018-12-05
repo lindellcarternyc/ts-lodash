@@ -11,15 +11,20 @@ describe('#pullAllBy', () => {
   })
 
   it('should pull all items using property name', () => {
-    const array = [{
-      x: 1, y: 2
-    }, {
-      x: 3, y: 2
-    }]
+    const array = [
+      {
+        x: 1,
+        y: 2,
+      },
+      {
+        x: 3,
+        y: 2,
+      },
+    ]
 
-    const values = [{x: 1, y: 3}]
+    const values = [{ x: 1, y: 3 }]
 
-    const expected = [{x: 3, y: 2}]
+    const expected = [{ x: 3, y: 2 }]
     const actual = pullAllBy(array, values, 'x')
 
     expect(actual).toEqual(expected)

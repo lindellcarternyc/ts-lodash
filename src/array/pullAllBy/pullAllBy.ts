@@ -9,7 +9,7 @@ const handlePull = <T, U>(array: T[], values: T[], func: TransformFunc<T, U>): T
 }
 
 const pullAllBy = <T, U, K extends keyof T>(array: T[], values: T[], transform: TransformFunc<T, U> | K): T[] => {
-  if ( typeof transform === 'function' ) {
+  if (typeof transform === 'function') {
     return handlePull(array, values, transform)
   }
 
