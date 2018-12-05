@@ -23,6 +23,7 @@ import join from './join'
 import last from './last'
 import lastIndexOf from './lastIndexOf'
 import nth from './nth'
+import pull from './pull'
 
 export {
   chunk,
@@ -49,5 +50,6 @@ export {
   join,
   last,
   lastIndexOf,
-  nth
+  nth,
+  pull,
 }
