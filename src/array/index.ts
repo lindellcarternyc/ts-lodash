@@ -25,6 +25,7 @@ import lastIndexOf from './lastIndexOf'
 import nth from './nth'
 import pull from './pull'
 import pullAll from './pullAll'
+import pullAllBy from './pullAllBy'
 
 export {
   chunk,
@@ -54,4 +55,5 @@ export {
   nth,
   pull,
   pullAll,
+  pullAllBy,
 }
