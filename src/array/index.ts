@@ -19,6 +19,7 @@ import initial from './initial'
 import intersection from './intersection'
 import intersectionBy from './intersectionBy'
 import intersectionWith from './intersectionWith'
+import join from './join'
 
 export {
   chunk,
@@ -42,4 +43,5 @@ export {
   intersection,
   intersectionBy,
   intersectionWith,
+  join,
 }
