@@ -22,6 +22,7 @@ import intersectionWith from './intersectionWith'
 import join from './join'
 import last from './last'
 import lastIndexOf from './lastIndexOf'
+import nth from './nth'
 
 export {
   chunk,
@@ -48,4 +49,5 @@ export {
   join,
   last,
   lastIndexOf,
+  nth
 }
