@@ -16,6 +16,7 @@ import fromPairs from './fromPairs'
 import head from './head'
 import indexOf from './indexOf'
 import initial from './initial'
+import intersection from './intersection'
 
 export {
   chunk,
@@ -35,5 +36,6 @@ export {
   fromPairs,
   head,
   indexOf,
-  initial
+  initial,
+  intersection
 }

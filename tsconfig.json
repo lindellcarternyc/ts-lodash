@@ -1,11 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "target": "es6",
+    "module": "esnext",
     "declaration": true,
     "outDir": "./lib",
     "strict": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "lib": [
+      "esnext",
+      "es2015.iterable",
+      "es2015.collection",
+      "dom.iterable",
+      "dom",
+      "dom.iterable"
+    ]
   },
   "include": [
     "src"
