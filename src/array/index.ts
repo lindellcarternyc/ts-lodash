@@ -9,6 +9,7 @@ import dropWhile from './dropWhile'
 import fill from './fill'
 import findIndex from './findIndex'
 import findLastIndex from './findLastIndex'
+import flatten from './flatten'
 
 export {
   chunk,
@@ -22,4 +23,5 @@ export {
   fill,
   findIndex,
   findLastIndex,
+  flatten,
 }
