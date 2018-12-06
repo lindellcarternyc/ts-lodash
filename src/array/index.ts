@@ -27,6 +27,7 @@ import pull from './pull'
 import pullAll from './pullAll'
 import pullAllBy from './pullAllBy'
 import pullAllWith from './pullAllWith'
+import pullAt from './pullAt'
 
 export {
   chunk,
@@ -58,4 +59,5 @@ export {
   pullAll,
   pullAllBy,
   pullAllWith,
+  pullAt,
 }
