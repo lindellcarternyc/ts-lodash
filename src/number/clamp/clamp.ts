@@ -5,7 +5,7 @@ function clamp(n: number, lower: number, upper?: number): number {
   let upperBound = n
   let lowerBound = lower
 
-  if ( upper === undefined ) {
+  if (upper === undefined) {
     upperBound = lower
     lowerBound = 0
   } else {
@@ -13,15 +13,15 @@ function clamp(n: number, lower: number, upper?: number): number {
     lowerBound = lower
   }
 
-  if ( lowerBound > upperBound ) {
+  if (lowerBound > upperBound) {
     const temp = lowerBound
     lowerBound = upperBound
     upperBound = temp
   }
 
-  if ( n < lowerBound ) {
+  if (n < lowerBound) {
     return lowerBound
-  } else if ( n > upperBound ) {
+  } else if (n > upperBound) {
     return upperBound
   }
   return n

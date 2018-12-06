@@ -5,7 +5,7 @@ function inRange(n: number, start: number, end?: number): boolean {
   let low: number
   let high: number
 
-  if ( end === undefined ) {
+  if (end === undefined) {
     low = 0
     high = start
   } else {
