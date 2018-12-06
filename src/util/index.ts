@@ -3,6 +3,7 @@ import defaultTo from './defaultTo'
 import flow from './flow'
 import flowRight from './flowRight'
 import identity from './identity'
+import iteree from './iteree'
 
 export {
   constant,
@@ -10,4 +11,5 @@ export {
   flow,
   flowRight,
   identity,
+  iteree,
 }
