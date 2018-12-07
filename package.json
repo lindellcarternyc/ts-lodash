@@ -19,7 +19,7 @@
     "preversion": "yarn lint",
     "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags",
-    "createFunction": "node scripts/index.js"
+    "module": "node scripts/index.js"
   },
   "files": [
     "lib/**/*"
