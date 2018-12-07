@@ -7,6 +7,7 @@ import iteree from './iteree'
 import matches from './matches'
 import matchesProperty from './matchesProperty'
 import method from './method'
+import noop from './noop'
 
 export {
   constant,
@@ -18,4 +19,5 @@ export {
   matches,
   matchesProperty,
   method,
+  noop,
 }
