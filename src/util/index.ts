@@ -5,6 +5,7 @@ import flowRight from './flowRight'
 import identity from './identity'
 import iteree from './iteree'
 import matches from './matches'
+import matchesProperty from './matchesProperty'
 
 export {
   constant,
@@ -14,4 +15,5 @@ export {
   identity,
   iteree,
   matches,
+  matchesProperty,
 }
