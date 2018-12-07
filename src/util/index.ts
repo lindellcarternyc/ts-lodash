@@ -6,6 +6,7 @@ import identity from './identity'
 import iteree from './iteree'
 import matches from './matches'
 import matchesProperty from './matchesProperty'
+import method from './method'
 
 export {
   constant,
@@ -16,4 +17,5 @@ export {
   iteree,
   matches,
   matchesProperty,
+  method,
 }
