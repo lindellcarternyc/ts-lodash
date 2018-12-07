@@ -4,6 +4,7 @@ import flow from './flow'
 import flowRight from './flowRight'
 import identity from './identity'
 import iteree from './iteree'
+import matches from './matches'
 
 export {
   constant,
@@ -12,4 +13,5 @@ export {
   flowRight,
   identity,
   iteree,
+  matches,
 }

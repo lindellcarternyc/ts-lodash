@@ -1,42 +1,33 @@
 import identity from '../identity'
+import matches from '../matches'
 
-type IdentityFunc<T> = (value: T) => T
-type TransformFunc<T, U> = (value: T) => U
-type MatchesObject<T> = Partial<T>
-type PropertyMatch<T, K extends keyof T> = [K, T[K]]
+type Identity<T> = (value: T) => T
+type Transform<T, U> = (value: T) => U
+type TransformBool<T> = (value: T) => boolean
 
-function iteree<T, K extends keyof T>(): IdentityFunc<T>
-function iteree<T, K extends keyof T>(func: MatchesObject<T> | PropertyMatch<T, K>): TransformFunc<T, boolean>
-// function iteree<T, K extends keyof T>(func: ): TransformFunc<T, boolean>
-function iteree<T, K extends keyof T>(func: K): TransformFunc<T, T[K]>
-function iteree<T, K extends keyof T, U>(func: TransformFunc<T, U>): (value: T) => U
-function iteree<T, K extends keyof T, U>(func?: TransformFunc<T, U> | MatchesObject<T> | PropertyMatch<T, K> | K): IdentityFunc<T> | TransformFunc<T, U> | TransformFunc<T, boolean> | TransformFunc<T, T[K]> {
+function iteree<T>(): <U extends T>(value: U) => U
+function iteree<T, U>(func: Transform<T, U>): Transform<T, U>
+function iteree<T>(func: string): <K extends keyof T>(value: T) => T[K]
+function iteree<T>(func: T): <U extends T>(value: U) => boolean
+function iteree<T, K extends keyof T = keyof T>(func: [K, T[K]]): (value: Partial<T>) => boolean
+function iteree<T, V extends T = any, K extends keyof T = keyof T, U = any>(func?: Transform<T, U> | T | K | [K, T[K]] | string): Identity<T> | Transform<T, U> | TransformBool<V> | Transform<T, T[K]> {
   if ( func ) {
     if ( typeof func === 'function' ) {
-      return (value: T) => func(value)
-    } else if ( func instanceof Array ) { 
+      return (value: T) => (func as Transform<T, U>)(value)
+    } else if ( typeof func === 'string') {
+      return (value: T): T[K] => { 
+        return value[(func as K)]
+       }
+    } else if ( func instanceof Array ) {
+      const [prop, val] = func
       return (value: T): boolean => {
-        const [prop, val] = func
         return value[prop] === val
       }
-    } else if ( typeof func === 'string' ) {
-      return (value: T): T[K] => {
-        const key = func as K
-        return value[key]
-      }
     } else {
-      const matches = func as MatchesObject<T>
-      return (value: T): boolean => {
-        for ( const prop in matches ) {
-          if ( value[prop] !== matches[prop] ) {
-            return false
-          }
-        }
-        return true
-      }
+      return (value: V) => matches<T>(func as T)(value)
     }
   }
-  return (value: T) => identity(value)
+  return (value: T) => identity<T>(value)
 }
 
 export default iteree
