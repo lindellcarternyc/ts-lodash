@@ -18,6 +18,7 @@ import stubArray from './stubArray'
 import stubFalse from './stubFalse'
 import stubObject from './stubObject'
 import stubTrue from './stubTrue'
+import times from './times'
 
 export {
   constant,
@@ -40,4 +41,5 @@ export {
   stubFalse,
   stubObject,
   stubTrue,
+  times,
 }
