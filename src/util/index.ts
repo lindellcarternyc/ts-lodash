@@ -14,6 +14,7 @@ import overEvery from './overEvery'
 import property from './property'
 import range from './range'
 import rangeRight from './rangeRight'
+import stubArray from './stubArray'
 
 export {
   constant,
@@ -32,4 +33,5 @@ export {
   property,
   range,
   rangeRight,
+  stubArray,
 }
