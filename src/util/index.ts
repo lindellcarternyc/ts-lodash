@@ -12,6 +12,7 @@ import nthArg from './nthArg'
 import over from './over'
 import overEvery from './overEvery'
 import property from './property'
+import range from './range'
 
 export {
   constant,
@@ -28,4 +29,5 @@ export {
   over,
   overEvery,
   property,
+  range,
 }
