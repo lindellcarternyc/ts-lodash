@@ -13,6 +13,7 @@ import over from './over'
 import overEvery from './overEvery'
 import property from './property'
 import range from './range'
+import rangeRight from './rangeRight'
 
 export {
   constant,
@@ -30,4 +31,5 @@ export {
   overEvery,
   property,
   range,
+  rangeRight,
 }
