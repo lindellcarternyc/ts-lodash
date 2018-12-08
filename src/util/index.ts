@@ -15,6 +15,9 @@ import property from './property'
 import range from './range'
 import rangeRight from './rangeRight'
 import stubArray from './stubArray'
+import stubFalse from './stubFalse'
+import stubObject from './stubObject'
+import stubTrue from './stubTrue'
 
 export {
   constant,
@@ -34,4 +37,7 @@ export {
   range,
   rangeRight,
   stubArray,
+  stubFalse,
+  stubObject,
+  stubTrue,
 }
