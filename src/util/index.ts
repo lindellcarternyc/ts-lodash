@@ -10,6 +10,7 @@ import method from './method'
 import noop from './noop'
 import nthArg from './nthArg'
 import over from './over'
+import overEvery from './overEvery'
 
 export {
   constant,
@@ -24,4 +25,5 @@ export {
   noop,
   nthArg,
   over,
+  overEvery,
 }
