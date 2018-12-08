@@ -9,6 +9,7 @@ import matchesProperty from './matchesProperty'
 import method from './method'
 import noop from './noop'
 import nthArg from './nthArg'
+import over from './over'
 
 export {
   constant,
@@ -22,4 +23,5 @@ export {
   method,
   noop,
   nthArg,
+  over,
 }
