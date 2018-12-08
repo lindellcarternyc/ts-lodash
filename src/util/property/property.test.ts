@@ -9,7 +9,7 @@ describe('#path', () => {
 
   it('should find a property at the root level', () => {
     const f = property('a')
-    const obj = { a : 2 }
+    const obj = { a: 2 }
     expect(f(obj)).toBe(2)
   })
 
@@ -27,19 +27,22 @@ describe('#path', () => {
       d: string
     }
   }
-  const objects: IObj[] = [{
-    a: 1,
-    b: {
-      c: 2,
-      d: 'hello'
-    }
-  }, {
-    a: 2,
-    b: {
-      c: 3,
-      d: 'world'
-    }
-  }]
+  const objects: IObj[] = [
+    {
+      a: 1,
+      b: {
+        c: 2,
+        d: 'hello',
+      },
+    },
+    {
+      a: 2,
+      b: {
+        c: 3,
+        d: 'world',
+      },
+    },
+  ]
   it('can used in a map function', () => {
     const mapCaller = property(['b', 'd'])
     const actual = objects.map(mapCaller)

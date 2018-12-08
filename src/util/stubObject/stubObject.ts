@@ -1,3 +1,3 @@
-const stubObject = (): { } => ({ })
+const stubObject = (): {} => ({})
 
 export default stubObject

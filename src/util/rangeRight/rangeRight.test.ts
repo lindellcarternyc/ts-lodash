@@ -17,7 +17,7 @@ describe('#rangeRight', () => {
   it('should return a range (desc) (3 params)', () => {
     const r1 = rangeRight(0, 20, 5)
     expect(r1).toEqual([15, 10, 5, 0])
-    
+
     const r2 = rangeRight(0, -4, -1)
     expect(r2).toEqual([-3, -2, -1, 0])
 

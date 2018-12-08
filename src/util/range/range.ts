@@ -1,7 +1,7 @@
 function range(start: number): number[]
 
 // tslint:disable-next-line:unified-signatures
-function range(start: number, end: number): number[] 
+function range(start: number, end: number): number[]
 
 // tslint:disable-next-line:unified-signatures
 function range(start: number, end: number, step: number): number[]
@@ -11,17 +11,17 @@ function range(start: number, end?: number, step?: number): number[] {
   let endIdx: number
   let delta: number
 
-  if ( step === 0 ) {
+  if (step === 0) {
     const times = Math.abs(start - end!)
     const res: number[] = []
-    for (let i = 0; i < times; i++ ) {
+    for (let i = 0; i < times; i++) {
       res.push(start)
     }
     return res
   }
 
-  if ( end === undefined && step === undefined ) {
-    if ( start < 0 ) {
+  if (end === undefined && step === undefined) {
+    if (start < 0) {
       delta = -1
       startIdx = 0
       endIdx = start
@@ -35,10 +35,10 @@ function range(start: number, end?: number, step?: number): number[] {
     endIdx = end!
     delta = step || 1
   }
-  
+
   const r: number[] = []
-  if ( delta >= 1 ) {
-    for ( let i = startIdx; i < endIdx; i += delta) {
+  if (delta >= 1) {
+    for (let i = startIdx; i < endIdx; i += delta) {
       r.push(i)
     }
   } else {
