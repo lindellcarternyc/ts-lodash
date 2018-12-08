@@ -1,4 +1,4 @@
-function range(end: number): number[]
+function range(start: number): number[]
 
 // tslint:disable-next-line:unified-signatures
 function range(start: number, end: number): number[] 
