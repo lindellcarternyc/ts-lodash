@@ -3,8 +3,8 @@ import identity from '../identity'
 type Func = (arg: any) => any
 
 const overEveryIdentity = (...args: any[]): boolean => {
-  for ( const arg of args ) {
-    if ( !!(identity(arg)) === false ) {
+  for (const arg of args) {
+    if (!!identity(arg) === false) {
       return false
     }
   }
@@ -14,12 +14,12 @@ const overEveryIdentity = (...args: any[]): boolean => {
 
 const overEvery = (funcs?: Func[]) => {
   return <TArgs extends any[]>(...args: TArgs): boolean => {
-    if ( !funcs ) {
+    if (!funcs) {
       return overEveryIdentity(args)
     } else {
-      for ( const arg of args ) {
-        for ( const f of funcs ) {
-          if ( !!f(arg) !== true ) {
+      for (const arg of args) {
+        for (const f of funcs) {
+          if (!!f(arg) !== true) {
             return false
           }
         }

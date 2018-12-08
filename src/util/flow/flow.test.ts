@@ -1,14 +1,11 @@
 import flow from './flow'
 
 describe('#flow', () => {
-  const funcs = [
-    (n: number, m: number) => n + m,
-    (n: number) => n * n
-  ]
+  const funcs = [(n: number, m: number) => n + m, (n: number) => n * n]
 
   it('should create a function', () => {
     const func = flow(funcs)
-  
+
     expect(typeof func).toBe('function')
   })
 

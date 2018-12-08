@@ -18,14 +18,14 @@ describe('#iteree', () => {
   })
 
   it('should accept a matches obj', () => {
-    const func = iteree({username: 'hello'})
-    const actual = func({username: 'hello', password: 'string'})
+    const func = iteree({ username: 'hello' })
+    const actual = func({ username: 'hello', password: 'string' })
     expect(actual).toBe(true)
   })
 
   it('should accept a property name', () => {
     const func = iteree('username')
-    const actual = func({username: 'hello'})
+    const actual = func({ username: 'hello' })
     expect(actual).toBe('hello')
   })
 
@@ -38,31 +38,30 @@ describe('#iteree', () => {
   const User1: IUser = {
     username: 'lindell',
     password: '12345',
-    friends: ['friend 1']
+    friends: ['friend 1'],
   }
 
   const User2: IUser = {
     username: 'Oliver',
     password: '12345',
-    friends: []
+    friends: [],
   }
 
   const Users: IUser[] = [User1, User2]
 
   it('should work in a map function', () => {
-    
     const mappedByPropertyName = Users.map(iteree('username'))
     expect(mappedByPropertyName).toEqual(['lindell', 'Oliver'])
   })
 
   it('shuold work in a filter function', () => {
-    const filtered = Users.filter(iteree({username: 'lindell'}))
+    const filtered = Users.filter(iteree({ username: 'lindell' }))
     expect(filtered).toEqual([User1])
   })
 
   it('should accept a prop tuple', () => {
     const func = iteree<IUser>(['username', 'lindell'])
-    const actual = func({username: 'lin'})
+    const actual = func({ username: 'lin' })
     expect(actual).toBe(false)
 
     const filtered = Users.filter(iteree<IUser>(['username', 'lindell']))

@@ -19,6 +19,6 @@ describe('#nthArg', () => {
 
   it('should recognize negative indexes', () => {
     expect(nthArg(-1)(1, 2, null)).toBe(null)
-    expect(nthArg(-2)({}, {hello: 'str'})).toEqual({})
+    expect(nthArg(-2)({}, { hello: 'str' })).toEqual({})
   })
 })

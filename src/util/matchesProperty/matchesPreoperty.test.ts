@@ -8,19 +8,22 @@ describe('#matches', () => {
 
   it('should return a function that returns true if an object has a matching property', () => {
     const func = matchesProperty('username', 'lindell')
-    const actual = func({username: 'lindell'})
+    const actual = func({ username: 'lindell' })
     expect(actual).toBe(true)
   })
 
-  const users = [{
-    username: 'lindell',
-    password: 'password',
-    friends: ['hello']
-  }, {
-    username: 'lindell1',
-    password: 'password',
-    friends: [ ]
-  }]
+  const users = [
+    {
+      username: 'lindell',
+      password: 'password',
+      friends: ['hello'],
+    },
+    {
+      username: 'lindell1',
+      password: 'password',
+      friends: [],
+    },
+  ]
 
   it('can be used to filter', () => {
     const actual = users.filter(matchesProperty('username', 'lindell'))
@@ -29,15 +32,14 @@ describe('#matches', () => {
 
   it('can be used to map', () => {
     const actual = users.map(user => {
-      return matchesProperty('username', 'lindell')(user)
-        ? user : null
+      return matchesProperty('username', 'lindell')(user) ? user : null
     })
     expect(actual).toEqual([users[0], null])
   })
 
   it('can be used in reduce', () => {
     const func = matchesProperty('username', 'lindell')
-    const reducer = (total: number, user: { }) => func(user) ? total + 1 : total
+    const reducer = (total: number, user: {}) => (func(user) ? total + 1 : total)
     const actual = users.reduce(reducer, 0)
     expect(actual).toBe(1)
   })
@@ -61,27 +63,29 @@ describe('#matches', () => {
       }
     }
 
-    const notes: INote[] = [{
-      name: '1',
-      duration: { base: 'a', dots: 2 }
-    }, {
-      name: '2',
-      duration: { base: 'b', dots: 4 }
-    }]
+    const notes: INote[] = [
+      {
+        name: '1',
+        duration: { base: 'a', dots: 2 },
+      },
+      {
+        name: '2',
+        duration: { base: 'b', dots: 4 },
+      },
+    ]
 
     const filteredByDurationBase = notes.filter(matchesProperty('duration.base', 'a'))
     expect(filteredByDurationBase).toEqual([notes[0]])
 
-    const map = (note: INote) => matchesProperty('duration.dots', 2)(note)
-      ? note.duration : null
-    
+    const map = (note: INote) => (matchesProperty('duration.dots', 2)(note) ? note.duration : null)
+
     const mapped = notes.map(map)
     expect(mapped).toEqual([notes[0].duration, null])
 
     const reducer = (total: number, note: INote) => {
-      if ( matchesProperty('duration.base', 'b')(note) ) {
+      if (matchesProperty('duration.base', 'b')(note)) {
         return total + note.duration.dots
-      } 
+      }
       return total
     }
     const actual = notes.reduce(reducer, 0)

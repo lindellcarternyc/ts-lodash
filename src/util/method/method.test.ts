@@ -22,16 +22,19 @@ describe('#method', () => {
   })
 
   interface IObj {
-    name: string,
+    name: string
     f: () => string
   }
-  const objects: IObj[] = [{
-    f: () => 'obj1',
-    name: 'hello'
-  }, {
-    f: () => 'obj2',
-    name: 'world'
-  }]
+  const objects: IObj[] = [
+    {
+      f: () => 'obj1',
+      name: 'hello',
+    },
+    {
+      f: () => 'obj2',
+      name: 'world',
+    },
+  ]
 
   it('should be usable in a map function', () => {
     const expected = ['obj1', 'obj2']
@@ -49,7 +52,7 @@ describe('#method', () => {
 
   it('accepts args', () => {
     const obj = {
-      f: (name: string) => `${name.toUpperCase()}`
+      f: (name: string) => `${name.toUpperCase()}`,
     }
 
     const f = method<typeof obj, string>('f')

@@ -2,7 +2,6 @@ import over from './over'
 
 import { over as _over } from 'lodash'
 
-
 describe('#over', () => {
   it('should return a function that defaults to identity', () => {
     const caller = over()
@@ -16,7 +15,10 @@ describe('#over', () => {
   })
 
   it('should combine values', () => {
-    const c = over<number[] | string>([(...nums: number[]) => nums.map(n => n * 2 + 5), (...nums: number[]) => nums.toString()])
+    const c = over<number[] | string>([
+      (...nums: number[]) => nums.map(n => n * 2 + 5),
+      (...nums: number[]) => nums.toString(),
+    ])
     const items = [1, 2, 3, 4]
     const expected = [items.map(i => i * 2 + 5), '1,2,3,4']
     const actual = c(...items)

@@ -1,6 +1,6 @@
 const handleMatch = <T, U extends T>(match: T, value: U): boolean => {
-  for ( const key in match ) {
-    if ( value[key] !== match[key] ) {
+  for (const key in match) {
+    if (value[key] !== match[key]) {
       return false
     }
   }

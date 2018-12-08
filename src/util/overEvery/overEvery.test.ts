@@ -19,10 +19,7 @@ describe('#overEvery', () => {
   })
 
   it('should accept 2 functions', () => {
-    const predicates = [
-      (n: number) => n.toString(),
-      (n: number) => n >= 5
-    ]
+    const predicates = [(n: number) => n.toString(), (n: number) => n >= 5]
 
     const caller = overEvery(predicates)
     expect(caller(1, 2, 3)).toBe(false)
