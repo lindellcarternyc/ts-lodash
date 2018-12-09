@@ -6,6 +6,8 @@ import mean from './mean'
 import meanBy from './meanBy'
 import min from './min'
 import minBy from './minBy'
+import multiply from './multiply'
+import subtract from './subtract'
 
 export {
   add,
@@ -16,4 +18,6 @@ export {
   meanBy,
   min,
   minBy,
+  multiply,
+  subtract,
 }
