@@ -19,6 +19,7 @@ import stubFalse from './stubFalse'
 import stubObject from './stubObject'
 import stubTrue from './stubTrue'
 import times from './times'
+import toPath from './toPath'
 
 export {
   constant,
@@ -42,4 +43,5 @@ export {
   stubObject,
   stubTrue,
   times,
+  toPath,
 }
