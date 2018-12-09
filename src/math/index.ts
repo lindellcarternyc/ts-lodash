@@ -8,6 +8,8 @@ import min from './min'
 import minBy from './minBy'
 import multiply from './multiply'
 import subtract from './subtract'
+import sum from './sum'
+import sumBy from './sumBy'
 
 export {
   add,
@@ -20,4 +22,6 @@ export {
   minBy,
   multiply,
   subtract,
+  sum,
+  sumBy,
 }
