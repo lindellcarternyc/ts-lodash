@@ -1,11 +1,4 @@
-const padRight = (str: string, length: number, char: string = '0'): string => {
-  let res = str
-  while ( res.length < length ) {
-    res += char
-  }
-
-  return res
-}
+import padNumRight from '../padNumberRight'
 
 function ceil(n: number): number
 
@@ -40,7 +33,7 @@ function ceil(n: number, precision?: number): number {
       .join(''))
     ).toString()
 
-    return parseFloat(padRight(resString, withoutDecimal.length))    
+    return parseFloat(padNumRight(resString, withoutDecimal.length))    
   }
 }
 
