@@ -30,7 +30,8 @@ function ceil(n: number, precision?: number): number {
     const precisionLength = withoutDecimal.length + precision - 1
     const [head, toRound] = [
       withoutDecimal.slice(0, precisionLength),
-      withoutDecimal.slice(precisionLength).split('')
+      withoutDecimal.slice(precisionLength)
+        .split('')
     ]
     
     const resString = head + Math.ceil(parseFloat(toRound
