@@ -8,7 +8,7 @@ function times<TResult>(n: number, func: (n?: number) => TResult): TResult[]
 function times<TResult>(n: number, func?: (n?: number) => TResult): number[] | TResult[] {
   const r = range(n)
 
-  if ( func ) {
+  if (func) {
     return r.map(func)
   }
   return r.map(_ => identity(n))

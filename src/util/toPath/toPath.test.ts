@@ -28,6 +28,5 @@ describe('#toPath', () => {
 
     const p3 = toPath('a[0][1].b[2]')
     expect(p3).toEqual(['a', '0', '1', 'b', '2'])
-    
   })
 })
