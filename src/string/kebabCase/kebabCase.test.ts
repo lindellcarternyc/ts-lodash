@@ -1,11 +1,7 @@
 import kebabCase from './kebabCase'
 
 describe('#kebabCase', () => {
-  const inputs = [
-    'foo bar',
-    'Foo Bar',
-    '*foo__bar'
-  ]
+  const inputs = ['foo bar', 'Foo Bar', '*foo__bar']
 
   const expected = 'foo-bar'
 

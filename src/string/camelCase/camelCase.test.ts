@@ -13,13 +13,8 @@ describe('#camelCase', () => {
 
   it('should camel case a space separated string', () => {
     const expected = 'fooBar'
-    
-    const inputs = [
-      'foo bar',
-      'Foo Bar',
-      'Foo bar',
-      'FOO BAR'
-    ]
+
+    const inputs = ['foo bar', 'Foo Bar', 'Foo bar', 'FOO BAR']
 
     inputs.forEach(input => {
       expect(camelCase(input)).toBe(expected)
@@ -27,10 +22,7 @@ describe('#camelCase', () => {
   })
 
   it('should ignore non letters', () => {
-    const inputs = [
-      '-foo-bar*',
-      '__FOO_BAR__'
-    ]
+    const inputs = ['-foo-bar*', '__FOO_BAR__']
     const expected = 'fooBar'
 
     inputs.forEach(input => {

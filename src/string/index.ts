@@ -7,13 +7,4 @@ import kebabCase from './kebabCase'
 import lowerCase from './lowerCase'
 import lowerFirst from './lowerFirst'
 
-export {
-  camelCase,
-  capitalize,
-  endsWith,
-  escape,
-  escapeRegExp,
-  kebabCase,
-  lowerCase,
-  lowerFirst,
-}
+export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst }

@@ -1,8 +1,8 @@
 type EscapeChar = '^' | '$' | '.' | '*' | '+' | '?' | '(' | ')' | '{' | '}' | '[' | ']' | '|'
 
-const EscapeMap: {[key in EscapeChar]: EscapeChar } = {
+const EscapeMap: { [key in EscapeChar]: EscapeChar } = {
   '^': '^',
-  '$': '$',
+  $: '$',
   '.': '.',
   '*': '*',
   '+': '+',
@@ -13,7 +13,7 @@ const EscapeMap: {[key in EscapeChar]: EscapeChar } = {
   '}': '}',
   '[': '[',
   ']': ']',
-  '|': '|'
+  '|': '|',
 }
 
 const isEscapeChar = (char: string): char is EscapeChar => {
@@ -27,7 +27,7 @@ const handleEscape = (char: EscapeChar): string => {
 const escapeRegExp = (str: string): string => {
   return str
     .split('')
-    .map(char => isEscapeChar(char) ? handleEscape(char) : char)
+    .map(char => (isEscapeChar(char) ? handleEscape(char) : char))
     .join('')
 }
 

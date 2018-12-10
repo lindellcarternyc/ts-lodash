@@ -28,9 +28,9 @@ describe('#escape', () => {
     expect(actual).toBe(expected)
   })
 
-  it('should escape \'', () => {
+  it("should escape '", () => {
     const input = "'hello"
-    const expected = "&#39;hello"
+    const expected = '&#39;hello'
     const actual = escape(input)
     expect(actual).toBe(expected)
   })

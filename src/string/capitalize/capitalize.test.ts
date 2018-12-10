@@ -6,16 +6,20 @@ describe('#capitalize', () => {
     expected: string
   }
 
-  const tests: ITest[] = [{
-    input: 'fred',
-    expected: 'Fred'
-  }, {
-    input: 'HELLO',
-    expected: 'Hello'
-  }, {
-    input: 'abCdE',
-    expected: 'Abcde'
-  }]
+  const tests: ITest[] = [
+    {
+      input: 'fred',
+      expected: 'Fred',
+    },
+    {
+      input: 'HELLO',
+      expected: 'Hello',
+    },
+    {
+      input: 'abCdE',
+      expected: 'Abcde',
+    },
+  ]
 
   tests.forEach(test => {
     it(`should capitalize ${test.input}`, () => {

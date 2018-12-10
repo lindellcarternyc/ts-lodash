@@ -3,9 +3,7 @@ const handleSearch = (str: string, target: string): boolean => {
 }
 
 const endsWith = (str: string, target: string, end?: number) => {
-  const searchStr = end === undefined
-    ? str.slice(str.length - target.length)
-    : str.slice(0, end)
+  const searchStr = end === undefined ? str.slice(str.length - target.length) : str.slice(0, end)
   return handleSearch(searchStr, target)
 }
 
