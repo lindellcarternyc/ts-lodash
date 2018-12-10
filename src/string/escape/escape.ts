@@ -1,10 +1,10 @@
-type EscapeCharType = '&' | '<' | '>' | "'" | '"'
+type EscapeChar = '&' | '<' | '>' | "'" | '"'
 
-const isEscapChar = (char: string) => {
+const isEscapChar = (char: string): char is EscapeChar => {
   return Object.keys(EscapeMap).indexOf(char) >= 0
 }
 
-const EscapeMap: {[key in EscapeCharType]: string} = {
+const EscapeMap: {[key in EscapeChar]: string} = {
   '&': 'amp',
   '<': 'lt',
   '>': 'gt',
@@ -12,14 +12,14 @@ const EscapeMap: {[key in EscapeCharType]: string} = {
   '"': 'quot'
 }
 
-const handleEscape = (char: EscapeCharType): string => {
+const handleEscape = (char: EscapeChar): string => {
   return `&${EscapeMap[char]};`
 }
 
 const escape = (str: string): string => {
   return str
     .split('')
-    .map(s => isEscapChar(s) ? handleEscape(s as EscapeCharType) : s)
+    .map(s => isEscapChar(s) ? handleEscape(s) : s)
     .join('')
 }
 
