@@ -4,6 +4,7 @@ import endsWith from './endsWith'
 import escape from './escape'
 import escapeRegExp from './escapeRegExp'
 import kebabCase from './kebabCase'
+import lowerCase from './lowerCase'
 import lowerFirst from './lowerFirst'
 
 export {
@@ -13,5 +14,6 @@ export {
   escape,
   escapeRegExp,
   kebabCase,
-  lowerFirst
+  lowerCase,
+  lowerFirst,
 }
