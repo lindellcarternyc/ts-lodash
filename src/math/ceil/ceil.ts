@@ -1,45 +1,16 @@
-import padNumRight from '../padNumberRight'
+import toPrecision from '../toPrecision'
 
-function ceil(n: number): number
+function ceil(num: number): number
 
 // tslint:disable-next-line:unified-signatures
-function ceil(n: number, precision: number): number
+function ceil(num: number, precision: number): number
 
-function ceil(n: number, precision?: number): number {
-  if ( precision === undefined || precision === 0 ) {
-    return Math.ceil(n)
-  } else if ( precision > 0 ) {
-    const [pre, post] = n.toString().split('.')
-    if ( precision < post.length ) {
-      const precisionLength = precision - 1
-      const [head, toRound] = [
-        post.slice(0, precisionLength),
-        post.slice(precisionLength, 1) + '.' + post.slice(precision)
-      ]
-      // const toRound = post.slice(precision - 1, 1) + '.' + post.slice(precision)
-      const roundedPost = Math.ceil(parseFloat(toRound))
-      const numString = `${pre}.${head}${roundedPost}`
-      return parseFloat(numString)
-    } else {
-      return n
-    }
-  } else { // precision is a negative number
-    const withoutDecimal = n.toString().split('.')[0]
-    const precisionLength = withoutDecimal.length + precision - 1
-    const [head, toRound] = [
-      withoutDecimal.slice(0, precisionLength),
-      withoutDecimal.slice(precisionLength)
-        .split('')
-    ]
-    
-    const resString = head + Math.ceil(parseFloat(toRound
-      .slice(0, 1)
-      .concat('.', ...toRound.slice(1))
-      .join(''))
-    ).toString()
+function ceil(num: number, precision?: number): number {
+  const f = precision === undefined
+    ? toPrecision('ceil')
+    : toPrecision('ceil', precision)
 
-    return parseFloat(padNumRight(resString, withoutDecimal.length))    
-  }
+  return f(num)
 }
 
 export default ceil
