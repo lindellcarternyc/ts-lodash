@@ -1,13 +1,15 @@
 import padNumRight from '../padNumberRight'
 
-type Operation = 'ceil' | 'floor'
+type Operation = 'ceil' | 'floor' | 'round'
 
 type NumFunc = (num: number) => number
 
 const getOperationFunc = (operation: Operation): NumFunc => {
-  return operation === 'ceil'
-    ? Math.ceil
-    : Math.floor
+  switch (operation) {
+    case 'ceil': return Math.ceil
+    case 'floor': return Math.floor
+    case 'round': return Math.round
+  }
 }
 
 const handleNoPrecision = (func: NumFunc) => (num: number): number => func(num)
