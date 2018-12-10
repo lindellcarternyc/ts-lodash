@@ -11,9 +11,14 @@ function ceil(n: number, precision?: number): number {
   } else if ( precision > 0 ) {
     const [pre, post] = n.toString().split('.')
     if ( precision < post.length ) {
-      const toRound = post.slice(precision - 1, 1) + '.' + post.slice(precision)
+      const precisionLength = precision - 1
+      const [head, toRound] = [
+        post.slice(0, precisionLength),
+        post.slice(precisionLength, 1) + '.' + post.slice(precision)
+      ]
+      // const toRound = post.slice(precision - 1, 1) + '.' + post.slice(precision)
       const roundedPost = Math.ceil(parseFloat(toRound))
-      const numString = `${pre}.${post.slice(0, precision - 1)}${roundedPost}`
+      const numString = `${pre}.${head}${roundedPost}`
       return parseFloat(numString)
     } else {
       return n
