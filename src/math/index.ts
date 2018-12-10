@@ -13,19 +13,4 @@ import subtract from './subtract'
 import sum from './sum'
 import sumBy from './sumBy'
 
-export {
-  add,
-  ceil,
-  floor,
-  max,
-  maxBy,
-  mean,
-  meanBy,
-  min,
-  minBy,
-  multiply,
-  round,
-  subtract,
-  sum,
-  sumBy,
-}
+export { add, ceil, floor, max, maxBy, mean, meanBy, min, minBy, multiply, round, subtract, sum, sumBy }

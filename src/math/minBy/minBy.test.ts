@@ -6,13 +6,16 @@ describe('#minBy', () => {
     numFriends: number
   }
 
-  const users: IUser[] = [{
-    username: 'user1',
-    numFriends: 10
-  }, {
-    username: 'user',
-    numFriends: 5
-  }]
+  const users: IUser[] = [
+    {
+      username: 'user1',
+      numFriends: 10,
+    },
+    {
+      username: 'user',
+      numFriends: 5,
+    },
+  ]
 
   it('should find min object using function', () => {
     const actual = minBy(users, user => user.username.length)

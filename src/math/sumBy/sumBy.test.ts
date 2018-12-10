@@ -1,13 +1,16 @@
 import sumBy from './sumBy'
 
 describe('#sumBy', () => {
-  const objects = [{
-    a: 1,
-    b: 'hello'
-  }, {
-    a: 5,
-    b: 'world'
-  }]
+  const objects = [
+    {
+      a: 1,
+      b: 'hello',
+    },
+    {
+      a: 5,
+      b: 'world',
+    },
+  ]
 
   it('should return the sum using a map function', () => {
     const actual = sumBy(objects, o => o.b.length)

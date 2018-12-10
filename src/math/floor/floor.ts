@@ -6,9 +6,7 @@ function floor(num: number): number
 function floor(num: number, precision: number): number
 
 function floor(num: number, precision?: number): number {
-  const f = precision === undefined
-    ? toPrecision('floor')
-    : toPrecision('floor', precision)
+  const f = precision === undefined ? toPrecision('floor') : toPrecision('floor', precision)
 
   return f(num)
 }

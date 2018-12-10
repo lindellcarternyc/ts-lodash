@@ -6,9 +6,7 @@ function ceil(num: number): number
 function ceil(num: number, precision: number): number
 
 function ceil(num: number, precision?: number): number {
-  const f = precision === undefined
-    ? toPrecision('ceil')
-    : toPrecision('ceil', precision)
+  const f = precision === undefined ? toPrecision('ceil') : toPrecision('ceil', precision)
 
   return f(num)
 }

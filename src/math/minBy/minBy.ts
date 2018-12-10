@@ -5,11 +5,11 @@ function minBy<T, K extends keyof T>(objects: T[], property: K): T | undefined
 function minBy<T, K extends keyof T>(objects: T[], iteree: ((obj: T) => number) | K): T | undefined {
   let numbers: number[]
 
-  if ( typeof iteree === 'function' ) {
+  if (typeof iteree === 'function') {
     numbers = objects.map(iteree)
   } else {
-    if ( typeof objects[0][iteree] === 'number' ) {
-      numbers = objects.reduce<number[]>((res, obj) => { 
+    if (typeof objects[0][iteree] === 'number') {
+      numbers = objects.reduce<number[]>((res, obj) => {
         return res.concat(obj[iteree] as any)
       }, [])
     } else {

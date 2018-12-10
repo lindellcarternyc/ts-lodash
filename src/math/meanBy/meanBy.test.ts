@@ -8,11 +8,16 @@ describe('#meanBy', () => {
     }
   }
 
-  const objects: IObj[] = [{
-    a: 5, b: { c: 'hello' }
-  }, {
-    a: 6, b: { c: 'world' }
-  }]
+  const objects: IObj[] = [
+    {
+      a: 5,
+      b: { c: 'hello' },
+    },
+    {
+      a: 6,
+      b: { c: 'world' },
+    },
+  ]
 
   it('should use function to find the mean', () => {
     const actual = meanBy(objects, o => o.a + o.b.c.length)

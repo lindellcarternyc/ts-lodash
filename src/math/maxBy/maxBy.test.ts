@@ -7,16 +7,19 @@ describe('#maxBy', () => {
     likes: number
   }
 
-  const users: IUser[] = [{
-    username: 'lindell',
-    friends: ['friend1'],
-    likes: 4
-  }, {
-    username: 'username',
-    friends: [],
-    likes: 10
-  }]
-  
+  const users: IUser[] = [
+    {
+      username: 'lindell',
+      friends: ['friend1'],
+      likes: 4,
+    },
+    {
+      username: 'username',
+      friends: [],
+      likes: 10,
+    },
+  ]
+
   it('should return the max object using a function', () => {
     const actual = maxBy(users, user => user.friends.length)
     expect(actual).toEqual(users[0])
