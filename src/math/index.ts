@@ -1,5 +1,6 @@
 import add from './add'
 import ceil from './ceil'
+import floor from './floor'
 import max from './max'
 import maxBy from './maxBy'
 import mean from './mean'
@@ -7,6 +8,7 @@ import meanBy from './meanBy'
 import min from './min'
 import minBy from './minBy'
 import multiply from './multiply'
+import round from './round'
 import subtract from './subtract'
 import sum from './sum'
 import sumBy from './sumBy'
@@ -14,6 +16,7 @@ import sumBy from './sumBy'
 export {
   add,
   ceil,
+  floor,
   max,
   maxBy,
   mean,
@@ -21,6 +24,7 @@ export {
   min,
   minBy,
   multiply,
+  round,
   subtract,
   sum,
   sumBy,
