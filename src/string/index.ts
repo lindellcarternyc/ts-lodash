@@ -6,5 +6,6 @@ import escapeRegExp from './escapeRegExp'
 import kebabCase from './kebabCase'
 import lowerCase from './lowerCase'
 import lowerFirst from './lowerFirst'
+import pInt from './parseInt'
 
-export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst }
+export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst, pInt as parseInt }
