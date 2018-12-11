@@ -8,5 +8,6 @@ import lowerCase from './lowerCase'
 import lowerFirst from './lowerFirst'
 import pInt from './parseInt'
 import repeat from './repeat'
+import replace from './replace'
 
-export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst, pInt as parseInt, repeat }
+export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst, pInt as parseInt, repeat, replace }
