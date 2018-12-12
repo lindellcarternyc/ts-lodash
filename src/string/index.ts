@@ -15,4 +15,21 @@ import trim from './trim'
 import trimEnd from './trimEnd'
 import trimStart from './trimStart'
 
-export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst, pInt as parseInt, repeat, replace, toLower, toUpper, trim, trimEnd, trimStart }
+export {
+  camelCase,
+  capitalize,
+  endsWith,
+  escape,
+  escapeRegExp,
+  kebabCase,
+  lowerCase,
+  lowerFirst,
+  pInt as parseInt,
+  repeat,
+  replace,
+  toLower,
+  toUpper,
+  trim,
+  trimEnd,
+  trimStart,
+}

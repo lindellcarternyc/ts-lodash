@@ -1,5 +1,5 @@
 const handleRepeat = (str: string, n: number, result: string = ''): string => {
-  if ( n <= 0 ) {
+  if (n <= 0) {
     return result
   }
   return handleRepeat(str, n - 1, result + str)
