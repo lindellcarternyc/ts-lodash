@@ -19,7 +19,8 @@
     "preversion": "yarn lint",
     "version": "yarn format && git add -A src",
     "postversion": "git push && git push --tags",
-    "module": "node scripts/index.js"
+    "module": "node scripts/index.js",
+    "createFunction": "node \"node_modules/lc-ts-generator/lib\" createFunction"
   },
   "files": [
     "lib/**/*"
@@ -39,6 +40,7 @@
     "commander": "^2.19.0",
     "inquirer": "^6.2.1",
     "jest": "^23.6.0",
+    "lc-ts-generator": "^1.1.1",
     "lodash": "^4.17.11",
     "mkdirp": "^0.5.1",
     "prettier": "^1.15.3",
