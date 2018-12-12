@@ -997,6 +997,10 @@ function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
 
+g@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/g/-/g-2.0.1.tgz#0b5963ebd0ca70e3bc8c6766934a021821c8b857"
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -1894,6 +1898,14 @@ kind-of@^6.0.0, kind-of@^6.0.2:
 kleur@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-2.0.2.tgz#b704f4944d95e255d038f0cb05fb8a602c55a300"
+
+lc-ts-generator@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/lc-ts-generator/-/lc-ts-generator-1.1.1.tgz#6140550b0e10eb4481332fe1eec6d1ef2b2524f7"
+  dependencies:
+    commander "^2.19.0"
+    g "^2.0.1"
+    inquirer "^6.2.1"
 
 lcid@^1.0.0:
   version "1.0.0"
