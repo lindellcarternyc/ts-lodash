@@ -10,5 +10,6 @@ import pInt from './parseInt'
 import repeat from './repeat'
 import replace from './replace'
 import toLower from './toLower'
+import toUpper from './toUpper'
 
-export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst, pInt as parseInt, repeat, replace, toLower }
+export { camelCase, capitalize, endsWith, escape, escapeRegExp, kebabCase, lowerCase, lowerFirst, pInt as parseInt, repeat, replace, toLower, toUpper }
