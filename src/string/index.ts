@@ -14,6 +14,8 @@ import toUpper from './toUpper'
 import trim from './trim'
 import trimEnd from './trimEnd'
 import trimStart from './trimStart'
+import truncate from './truncate'
+import upperCase from './upperCase'
 
 export {
   camelCase,
@@ -32,4 +34,6 @@ export {
   trim,
   trimEnd,
   trimStart,
+  truncate,
+  upperCase,
 }
