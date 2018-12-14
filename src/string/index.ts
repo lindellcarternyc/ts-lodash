@@ -16,6 +16,7 @@ import trimEnd from './trimEnd'
 import trimStart from './trimStart'
 import truncate from './truncate'
 import upperCase from './upperCase'
+import words from './words'
 
 export {
   camelCase,
@@ -36,4 +37,5 @@ export {
   trimStart,
   truncate,
   upperCase,
+  words,
 }
