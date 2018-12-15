@@ -6,6 +6,7 @@ import escapeRegExp from './escapeRegExp'
 import kebabCase from './kebabCase'
 import lowerCase from './lowerCase'
 import lowerFirst from './lowerFirst'
+import pad from './pad'
 import pInt from './parseInt'
 import repeat from './repeat'
 import replace from './replace'
@@ -27,6 +28,7 @@ export {
   kebabCase,
   lowerCase,
   lowerFirst,
+  pad,
   pInt as parseInt,
   repeat,
   replace,
