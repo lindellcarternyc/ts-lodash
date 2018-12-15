@@ -7,6 +7,8 @@ import kebabCase from './kebabCase'
 import lowerCase from './lowerCase'
 import lowerFirst from './lowerFirst'
 import pad from './pad'
+import padEnd from './padEnd'
+import padStart from './padStart'
 import pInt from './parseInt'
 import repeat from './repeat'
 import replace from './replace'
@@ -29,6 +31,8 @@ export {
   lowerCase,
   lowerFirst,
   pad,
+  padEnd,
+  padStart,
   pInt as parseInt,
   repeat,
   replace,
