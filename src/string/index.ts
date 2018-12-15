@@ -19,6 +19,7 @@ import trimEnd from './trimEnd'
 import trimStart from './trimStart'
 import truncate from './truncate'
 import upperCase from './upperCase'
+import upperFirst from './upperFirst'
 import words from './words'
 
 export {
@@ -43,5 +44,6 @@ export {
   trimStart,
   truncate,
   upperCase,
+  upperFirst,
   words,
 }
