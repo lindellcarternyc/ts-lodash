@@ -1,4 +1,4 @@
-import lowercase from './lowerCase'
+import lowerCase from './lowerCase'
 
 describe('#lowercase', () => {
   const inputs = ['--Foo-bar', 'fooBar', '__FOO_BAR__']
@@ -7,7 +7,7 @@ describe('#lowercase', () => {
 
   inputs.forEach(input => {
     it(`should lowercase ${input}`, () => {
-      const actual = lowercase(input)
+      const actual = lowerCase(input)
       expect(actual).toBe(expected)
     })
   })

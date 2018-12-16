@@ -1,4 +1,4 @@
-const lowercase = (str: string): string => {
+const lowerCase = (str: string): string => {
   return str
     .replace(/[^a-z]/gi, _ => ' ')
     .split(' ')
@@ -13,4 +13,4 @@ const lowercase = (str: string): string => {
     .join(' ')
 }
 
-export default lowercase
+export default lowerCase
