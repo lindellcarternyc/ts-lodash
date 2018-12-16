@@ -12,6 +12,7 @@ import padStart from './padStart'
 import pInt from './parseInt'
 import repeat from './repeat'
 import replace from './replace'
+import snakeCase from './snakeCase'
 import toLower from './toLower'
 import toUpper from './toUpper'
 import trim from './trim'
@@ -37,6 +38,7 @@ export {
   pInt as parseInt,
   repeat,
   replace,
+  snakeCase,
   toLower,
   toUpper,
   trim,
