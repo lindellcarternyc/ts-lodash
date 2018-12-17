@@ -13,6 +13,7 @@ import pInt from './parseInt'
 import repeat from './repeat'
 import replace from './replace'
 import snakeCase from './snakeCase'
+import split from './split'
 import toLower from './toLower'
 import toUpper from './toUpper'
 import trim from './trim'
@@ -39,6 +40,7 @@ export {
   repeat,
   replace,
   snakeCase,
+  split,
   toLower,
   toUpper,
   trim,
