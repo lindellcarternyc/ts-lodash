@@ -14,6 +14,7 @@ import repeat from './repeat'
 import replace from './replace'
 import snakeCase from './snakeCase'
 import split from './split'
+import startCase from './startCase'
 import toLower from './toLower'
 import toUpper from './toUpper'
 import trim from './trim'
@@ -41,6 +42,7 @@ export {
   replace,
   snakeCase,
   split,
+  startCase,
   toLower,
   toUpper,
   trim,
