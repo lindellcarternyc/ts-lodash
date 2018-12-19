@@ -3,7 +3,7 @@ import camelCase from './camelCase'
 describe('#camelCase', () => {
   it('should return a string in camel case', () => {
     const a = camelCase('camelCase')
-    expect(a).toBe('camelcase')
+    expect(a).toBe('camelCase')
   })
 
   it('should camel case a single string', () => {
