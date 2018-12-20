@@ -31,6 +31,7 @@ import pullAt from './pullAt'
 import remove from './remove'
 import reverse from './reverse'
 import tail from './tail'
+import take from './take'
 
 export {
   chunk,
@@ -66,4 +67,5 @@ export {
   remove,
   reverse,
   tail,
+  take,
 }
