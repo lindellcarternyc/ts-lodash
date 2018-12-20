@@ -29,6 +29,7 @@ import pullAllBy from './pullAllBy'
 import pullAllWith from './pullAllWith'
 import pullAt from './pullAt'
 import remove from './remove'
+import reverse from './reverse'
 
 export {
   chunk,
@@ -62,4 +63,5 @@ export {
   pullAllWith,
   pullAt,
   remove,
+  reverse,
 }
