@@ -1,11 +1,11 @@
 type EscapedCharacter = '&amp;' | '&lt;' | '&gt;' | '&quot;' | '&#39;'
 
-const EscapedCharMap: {[K in EscapedCharacter]: string} = {
-  '&#39;': '\'',
+const EscapedCharMap: { [K in EscapedCharacter]: string } = {
+  '&#39;': "'",
   '&amp;': '&',
   '&gt;': '>',
   '&lt;': '<',
-  '&quot;': '"'
+  '&quot;': '"',
 }
 
 export const isEscapedCharacter = (str: string): str is EscapedCharacter => {
@@ -19,9 +19,7 @@ const handleUnescape = (char: EscapedCharacter): string => {
 const unescape = (str: string): string => {
   const re = /&(amp|lt|gt|quot|#39);/g
   return str.replace(re, s => {
-    return isEscapedCharacter(s)
-      ? handleUnescape(s)
-      : s
+    return isEscapedCharacter(s) ? handleUnescape(s) : s
   })
 }
 

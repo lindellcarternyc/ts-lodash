@@ -15,11 +15,7 @@ describe('#upperCase', () => {
     expect(actual).toBe(expected)
   })
 
-  const tests = [
-    '--foo-bar',
-    'fooBar',
-    '__foo_bar__'
-  ]
+  const tests = ['--foo-bar', 'fooBar', '__foo_bar__']
 
   tests.forEach(test => {
     it(`should convert ${test}`, () => {

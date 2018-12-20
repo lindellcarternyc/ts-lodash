@@ -7,24 +7,24 @@ const pad = (str: string, length: number, chars: string = ' '): string => {
   let end = ''
   let charIdx = 0
 
-  while ( combineLengths(str, start, end) < length ) {
-    if ( combineLengths(str, start, end) < length - 2 ) {
+  while (combineLengths(str, start, end) < length) {
+    if (combineLengths(str, start, end) < length - 2) {
       start += chars[charIdx]
       end += chars[charIdx]
 
       charIdx++
-      if ( charIdx >= chars.length ) {
+      if (charIdx >= chars.length) {
         charIdx = 0
       }
     } else {
       break
     }
   }
-  
-  while ( combineLengths(str, start, end) < length ) {
+
+  while (combineLengths(str, start, end) < length) {
     end += chars[charIdx]
     charIdx++
-    if ( charIdx >= chars.length ) {
+    if (charIdx >= chars.length) {
       charIdx = 0
     }
   }

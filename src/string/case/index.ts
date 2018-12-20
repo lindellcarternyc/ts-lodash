@@ -5,11 +5,4 @@ import snakeCase from './snakeCase'
 import startCase from './startCase'
 import upperCase from './upperCase'
 
-export {
-  camelCase,
-  kebabCase,
-  lowerCase,
-  snakeCase,
-  startCase,
-  upperCase
-}
+export { camelCase, kebabCase, lowerCase, snakeCase, startCase, upperCase }

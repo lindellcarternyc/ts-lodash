@@ -1,9 +1,7 @@
 import unescape, { isEscapedCharacter } from './unescape'
 
 describe('#isEscapedCharater', () => {
-  const tests = [
-    '&amp;', '&lt;', '&gt;', '&quot;', '&#39;'
-  ]
+  const tests = ['&amp;', '&lt;', '&gt;', '&quot;', '&#39;']
 
   tests.forEach(test => {
     it(`should recognze ${test} as an escaped char`, () => {

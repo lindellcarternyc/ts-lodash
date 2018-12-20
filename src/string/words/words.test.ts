@@ -4,7 +4,7 @@ describe('#words', () => {
   it('should split a string att all non-word chars', () => {
     const input = 'fred, barney, & pebbles'
     const expectd = ['fred', 'barney', 'pebbles']
-    const actual =  words(input)
+    const actual = words(input)
     expect(actual).toEqual(expectd)
   })
 

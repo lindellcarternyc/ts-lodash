@@ -2,7 +2,7 @@ import capitalize from '../capitalize'
 import caseString from './case'
 
 const handleCamelCase = caseString((s, idx) => {
-  if ( idx === 0 ) {
+  if (idx === 0) {
     return s.toLowerCase()
   }
   return capitalize(s)

@@ -14,13 +14,12 @@ describe('#truncate', () => {
     const expected = InputString.slice(0, 27) + '...'
     const actual = truncate(InputString)
     expect(actual).toBe(expected)
-
   })
 
   it('should accept an alternate ending', () => {
     const expected = InputString.slice(0, 24) + ' [...]'
     const actual = truncate(InputString, {
-      omission: ' [...]'
+      omission: ' [...]',
     })
     expect(actual).toBe(expected)
   })
@@ -29,7 +28,7 @@ describe('#truncate', () => {
     const length = 15
     const expected = InputString.slice(0, 12) + '...'
     const actual = truncate(InputString, {
-      length
+      length,
     })
     expect(actual).toBe(expected)
   })
@@ -40,7 +39,7 @@ describe('#truncate', () => {
     const expected = InputString.slice(0, 19) + '...'
     const actual = truncate(InputString, {
       length,
-      separator
+      separator,
     })
 
     expect(actual).toBe(expected)
@@ -49,7 +48,7 @@ describe('#truncate', () => {
   it('should accept a length and RegExp as separator', () => {
     const expected = InputString.slice(0, 24) + ' [...]'
     const actual = truncate(InputString, {
-      omission: ' [...]'
+      omission: ' [...]',
     })
     expect(actual).toBe(expected)
   })
