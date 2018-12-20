@@ -9,9 +9,9 @@ export type MatchType<T extends {[key: string]: any}>
   | MatchKey<T>
   | MatchValue<T, MatchKey<T>>
 
-export const handleMatch = <T extends {[key: string]: any}>(item: T, match: MatchType<T>): boolean => {
+export const handleMatch = <T extends {[key: string]: any}>(item: T, match: MatchType<T>, index: number, array: T[]): boolean => {
   if ( typeof match === 'function' ) {
-    return (match as (item: T) => boolean)(item)
+    return (match as MatchFunc<T>)(item, index, array)
   } else if ( match instanceof Array ) {
     const [prop, value] = match
     return item[prop] === value
