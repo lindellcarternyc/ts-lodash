@@ -1,2 +1,9 @@
 import union from './union'
-export default union
+import unionBy from './unionBy'
+import unionWith from './unionWith'
+
+export {
+  union,
+  unionBy,
+  unionWith,
+}
