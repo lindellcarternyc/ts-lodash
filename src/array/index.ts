@@ -36,6 +36,7 @@ import takeRight from './takeRight'
 import takeRightWhile from './takeRightWhile'
 import takeWhile from './takeWhile'
 import union from './union'
+import { uniq, uniqBy, uniqWith } from './uniq'
 
 export {
   chunk,
@@ -76,4 +77,7 @@ export {
   takeRightWhile,
   takeWhile,
   union,
+  uniq,
+  uniqBy,
+  uniqWith
 }
