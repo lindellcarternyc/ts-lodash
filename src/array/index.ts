@@ -35,6 +35,7 @@ import take from './take'
 import takeRight from './takeRight'
 import takeRightWhile from './takeRightWhile'
 import takeWhile from './takeWhile'
+import union from './union'
 
 export {
   chunk,
@@ -74,4 +75,5 @@ export {
   takeRight,
   takeRightWhile,
   takeWhile,
+  union,
 }
