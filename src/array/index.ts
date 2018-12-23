@@ -37,6 +37,7 @@ import takeRightWhile from './takeRightWhile'
 import takeWhile from './takeWhile'
 import { union, unionBy, unionWith } from './union'
 import { uniq, uniqBy, uniqWith } from './uniq'
+import { zip, zipObject, zipWith } from './zip'
 
 export {
   chunk,
@@ -81,5 +82,8 @@ export {
   unionWith,
   uniq,
   uniqBy,
-  uniqWith
+  uniqWith,
+  zip,
+  zipObject,
+  zipWith,
 }
