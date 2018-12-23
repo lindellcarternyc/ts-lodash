@@ -6,7 +6,9 @@ const unionBy = <T, K extends keyof T>(array1: T[], otherArrays: T[][], func: K 
   let [result, map] = handleUniqBy(array1, func)
 
   for (const otherArray of otherArrays) {
-    ;[result, map] = handleUniqBy(otherArray, func, 0, result, map)
+    const [newResult, newMap] = handleUniqBy(otherArray, func, 0, result, map)
+    result = newResult
+    map = newMap
   }
   return result
 }
