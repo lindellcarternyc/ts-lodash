@@ -1,5 +1,5 @@
 const tail = <T>(arr: T[]): T[] => {
-  const [ _, ...rest] = arr
+  const [_, ...rest] = arr
   return rest
 }
 

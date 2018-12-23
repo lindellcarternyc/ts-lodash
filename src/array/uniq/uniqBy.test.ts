@@ -10,7 +10,7 @@ describe('#uniqBy', () => {
 
   it('should accept the property shorthand', () => {
     const objects = [{ name: 'lindell' }, { name: 'lindell' }]
-    const expectedObjects = [{name: 'lindell'}]
+    const expectedObjects = [{ name: 'lindell' }]
     const actualObjects = uniqBy(objects, 'name')
     expect(actualObjects).toEqual(expectedObjects)
   })

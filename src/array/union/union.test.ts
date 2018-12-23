@@ -14,7 +14,7 @@ describe('#union', () => {
     const a1 = [1, 2, 3]
     const a2 = [2, 3, 4]
     const a3 = [1, 5, 6, 7]
-    const expectedUnion = [ 1, 2, 3, 4, 5, 6, 7 ]
+    const expectedUnion = [1, 2, 3, 4, 5, 6, 7]
     const actualUnion = union(a1, a2, a3)
     expect(expectedUnion).toEqual(actualUnion)
   })

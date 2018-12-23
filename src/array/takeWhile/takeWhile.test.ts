@@ -6,16 +6,20 @@ describe('#takeWhile', () => {
     active: boolean
   }
 
-  const Users: IUser[] = [{
-    name: 'barney',
-    active: false
-  }, {
-    name: 'fred',
-    active: false
-  }, {
-    name: 'pebbles',
-    active: true
-  }]
+  const Users: IUser[] = [
+    {
+      name: 'barney',
+      active: false,
+    },
+    {
+      name: 'fred',
+      active: false,
+    },
+    {
+      name: 'pebbles',
+      active: true,
+    },
+  ]
 
   it('should accept a function', () => {
     const expectedUsers = takeWhile(Users, u => !u.active)
@@ -36,5 +40,4 @@ describe('#takeWhile', () => {
     const expectedUsers = takeWhile(Users, 'active')
     expect(expectedUsers).toEqual([])
   })
-
 })

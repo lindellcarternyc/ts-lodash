@@ -13,9 +13,7 @@ describe('zip with', () => {
   })
 
   it('should work with multiple values', () => {
-    const expectedNumLetters = [
-      '1a', '2b', '3c', '4d', '5e' 
-    ]
+    const expectedNumLetters = ['1a', '2b', '3c', '4d', '5e']
     const actualNumLetters = zipWith([numbers, letters], (n, s) => {
       return `${n}${s}`
     })
@@ -25,7 +23,9 @@ describe('zip with', () => {
   it('should work with multiple types', () => {
     const expectedMultple = ['1a', '2b', '3c', 4]
     const actualMultiple = zipWith([numbers, letters, booleans], (n, l, b) => {
-      if ( b ) { return `${n}${l}`}
+      if (b) {
+        return `${n}${l}`
+      }
       return n
     })
     expect(actualMultiple).toEqual(expectedMultple)

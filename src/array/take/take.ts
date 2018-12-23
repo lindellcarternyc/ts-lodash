@@ -2,15 +2,15 @@ const take = <T>(arr: T[], n?: number): T[] => {
   const res: T[] = []
 
   let end: number
-  if ( n === undefined ) {
+  if (n === undefined) {
     end = 1
-  } else if ( n <= 0 ) {
+  } else if (n <= 0) {
     end = 0
   } else {
     end = n
   }
 
-  for ( let i = 0; i < end && i < arr.length; i++ ) {
+  for (let i = 0; i < end && i < arr.length; i++) {
     res.push(arr[i])
   }
 

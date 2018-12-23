@@ -11,25 +11,14 @@ describe('#zip', () => {
   })
 
   it('should zip two arrays of the same length', () => {
-    const expectedZippedNumbersAndLetters = [
-      [1, 'a'],
-      [2, 'b'],
-      [3, 'c'],
-      [4, 'd'],
-      [5, 'e']
-    ]
+    const expectedZippedNumbersAndLetters = [[1, 'a'], [2, 'b'], [3, 'c'], [4, 'd'], [5, 'e']]
 
     const actualZippedNumsAndLetters = zip(numbers, letters)
     expect(actualZippedNumsAndLetters).toEqual(expectedZippedNumbersAndLetters)
   })
 
   it('should zip up to the length of shortest provided array', () => {
-    const expectedAllZipped = [
-      [1, 'a', true],
-      [2, 'b', true],
-      [3, 'c', false],
-      [4, 'd', true]
-    ]
+    const expectedAllZipped = [[1, 'a', true], [2, 'b', true], [3, 'c', false], [4, 'd', true]]
 
     const actualAllZipped = zip(numbers, letters, booleans)
     expect(actualAllZipped).toEqual(expectedAllZipped)
